@@ -13,7 +13,7 @@
       target.addEventListener('touchstart', handler);
     } else {
       target.addEventListener('mouseup', handler);
-      target.addEventListener('touchend', handler);
+      target.addEventListener('touchend', handler,{passive: true});
     }
   };
   const removeEvent = (target, type, handler) => {
@@ -22,7 +22,7 @@
       target.removeEventListener('touchstart', handler);
     } else {
       target.removeEventListener('mouseup', handler);
-      target.removeEventListener('touchend', handler);
+      target.removeEventListener('touchend', handler,{passive: true});
     }
   };
 
